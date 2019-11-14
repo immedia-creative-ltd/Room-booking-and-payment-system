@@ -1,0 +1,187 @@
+jQuery( document ).ready(function($) {
+
+//Page 2 calculate total number of guests
+var guest1 = 0;
+var guest2 = 0;
+var guest3 = 0;
+var guest4 = 0;
+var guest5 = 0;
+var guest6 = 0;
+var guest7 = 0;
+
+console.log("Guest1 = " + guest1);
+console.log("Guest2 = " + guest2);
+console.log("Guest3 = " + guest3);
+console.log("Guest4 = " + guest4);
+console.log("Guest5 = " + guest5);
+console.log("Guest6 = " + guest6);
+console.log("Guest7 = " + guest7);
+
+ var totalRoomGuests = parseInt(guest1) + parseInt(guest2) + parseInt(guest3) + parseInt(guest4) + parseInt(guest5) + parseInt(guest6) + parseInt(guest7);
+console.log("TotalGuests = " + totalRoomGuests);
+
+$("#totalRoomGuests").text(totalRoomGuests);
+
+$('#rockfm_ui2myw3ut25 input').blur(function() {
+    if($.trim($(this).val()) == ''){
+		guest1 = 0;
+		console.log("Guest1 = " + guest1);
+    } else {
+		guest1 = 1;
+		console.log("Guest1 = " + guest1 + ". Guest exists!");
+	}
+		totalRoomGuests = parseInt(guest1) + parseInt(guest2) + parseInt(guest3) + parseInt(guest4) + parseInt(guest5) + parseInt(guest6) + parseInt(guest7);
+		console.log("TotalGuests = " + totalRoomGuests);
+		$("#totalRoomGuests").text(totalRoomGuests);
+});
+
+$('#rockfm_ui7e8z8300w input').blur(function() {
+    if($.trim($(this).val()) == ''){
+		guest2 = 0;
+		console.log("Guest1 = " + guest1);
+    } else {
+		guest2 = 1;
+		console.log("Guest1 = " + guest1 + ". Guest exists!");
+	}
+		totalRoomGuests = parseInt(guest1) + parseInt(guest2) + parseInt(guest3) + parseInt(guest4) + parseInt(guest5) + parseInt(guest6) + parseInt(guest7);
+		console.log("TotalGuests = " + totalRoomGuests);
+		$("#totalRoomGuests").text(totalRoomGuests);
+});
+
+$('#rockfm_uiopxw5acz0 input').blur(function() {
+    if($.trim($(this).val()) == ''){
+		guest3 = 0;
+		console.log("Guest1 = " + guest1);
+    } else {
+		guest3 = 1;
+		console.log("Guest1 = " + guest1 + ". Guest exists!");
+	}
+		totalRoomGuests = parseInt(guest1) + parseInt(guest2) + parseInt(guest3) + parseInt(guest4) + parseInt(guest5) + parseInt(guest6) + parseInt(guest7);
+		console.log("TotalGuests = " + totalRoomGuests);
+		$("#totalRoomGuests").text(totalRoomGuests);
+});
+
+$('#rockfm_uimfr6rmk8o input').blur(function() {
+    if($.trim($(this).val()) == ''){
+		guest4 = 0;
+		console.log("Guest1 = " + guest1);
+    } else {
+		guest4 = 1;
+		console.log("Guest1 = " + guest1 + ". Guest exists!");
+	}
+		totalRoomGuests = parseInt(guest1) + parseInt(guest2) + parseInt(guest3) + parseInt(guest4) + parseInt(guest5) + parseInt(guest6) + parseInt(guest7);
+		console.log("TotalGuests = " + totalRoomGuests);
+		$("#totalRoomGuests").text(totalRoomGuests);
+});
+
+$('#rockfm_uic9t6ggmjo input').blur(function() {
+    if($.trim($(this).val()) == ''){
+		guest5 = 0;
+		console.log("Guest1 = " + guest1);
+    } else {
+		guest5 = 1;
+		console.log("Guest1 = " + guest1 + ". Guest exists!");
+	}
+		totalRoomGuests = parseInt(guest1) + parseInt(guest2) + parseInt(guest3) + parseInt(guest4) + parseInt(guest5) + parseInt(guest6) + parseInt(guest7);
+		console.log("TotalGuests = " + totalRoomGuests);
+		$("#totalRoomGuests").text(totalRoomGuests);
+});
+
+$('#rockfm_ui4s46qm2l6 input').blur(function() {
+    if($.trim($(this).val()) == ''){
+		guest6 = 0;
+		console.log("Guest1 = " + guest1);
+    } else {
+		guest6 = 1;
+		console.log("Guest1 = " + guest1 + ". Guest exists!");
+	}
+		totalRoomGuests = parseInt(guest1) + parseInt(guest2) + parseInt(guest3) + parseInt(guest4) + parseInt(guest5) + parseInt(guest6) + parseInt(guest7);
+		console.log("TotalGuests = " + totalRoomGuests);
+		$("#totalRoomGuests").text(totalRoomGuests);
+});
+
+$('#rockfm_uiaofykjjqj input').blur(function() {
+    if($.trim($(this).val()) == ''){
+		guest7 = 0;
+		console.log("Guest1 = " + guest1);
+    } else {
+		guest7 = 1;
+		console.log("Guest1 = " + guest1 + ". Guest exists!");
+	}
+		totalRoomGuests = parseInt(guest1) + parseInt(guest2) + parseInt(guest3) + parseInt(guest4) + parseInt(guest5) + parseInt(guest6) + parseInt(guest7);
+		console.log("TotalGuests = " + totalRoomGuests);
+		$("#totalRoomGuests").text(totalRoomGuests);
+});
+
+
+
+//Page 3 calculate guests going to events and compare with total guests
+
+var wineGuest = 0;
+var ferarriGuest = 0;
+
+var ferrariPitLane = 0;
+var ferrariSimulator = 0;
+
+$("#rockfm_ui5yl6wsulc select.sfdc-form-control").change(function(){
+ var wineGuestChange = $(this).children("option:selected").attr('data-uifm-inp-val');
+ wineGuest = parseInt(wineGuestChange);
+ console.log("wineGuest (change) = " + wineGuest );
+ var compareTotal = parseInt(wineGuest) + parseInt(ferarriGuest);
+  console.log("Total of Ferrari and wine guests = " + compareTotal );
+ if( compareTotal > totalRoomGuests ){
+	  alert("The number of guests selected exceeds the total number of guests.");
+	  $("#rockfm_ui5yl6wsulc select.sfdc-form-control").val("kv65i");
+	  wineGuest = 0;
+	  console.log("wineGuest (change) = " + wineGuest );
+ } 
+}); 
+
+$("#rockfm_ui75nqqlgbn select.sfdc-form-control").change(function(){
+ var ferarriGuestChange = $(this).children("option:selected").attr('data-uifm-inp-val');
+ ferarriGuest = parseInt(ferarriGuestChange);
+ console.log("ferarriGuest (change) = " + ferarriGuest );
+  var compareTotal = parseInt(wineGuest) + parseInt(ferarriGuest);
+   console.log("Total of Ferrari and wine guests = " + compareTotal );
+ if( compareTotal > totalRoomGuests ){
+	  alert("The number of guests selected exceeds the total number of guests.");
+	  $("#rockfm_ui75nqqlgbn select.sfdc-form-control").val("93rc5");
+	   ferarriGuest = 0;
+	   console.log("ferarriGuest (change) = " + ferarriGuest );
+ }
+	  $("#rockfm_uir1dkjzhu2 select.sfdc-form-control").val("t75kz");
+	  ferrariPitLane = 0;
+	  console.log("ferrariPitLane (change) = " + ferrariPitLane ); 
+	  $("#rockfm_uiuj97gsd21 select.sfdc-form-control").val("i54xp");
+	  ferrariSimulator = 0;
+	  console.log("ferrariSimulator (change) = " + ferrariSimulator );
+}); 
+
+//Page 3 make sure Ferrari event guests does not exclude Ferrari total
+
+
+$("#rockfm_uir1dkjzhu2 select.sfdc-form-control").change(function(){
+ var ferrariPitLaneChange = $(this).children("option:selected").attr('data-uifm-inp-val');
+    ferrariPitLane = parseInt(ferrariPitLaneChange);
+ console.log("ferrariPitLane (change) = " + ferrariPitLane );
+  if( ferrariPitLane > ferarriGuest ){
+	   alert("The number of guests for the Pit Stop Challenge exceeds the total number of guests for the Ferrari event.");
+	  $("#rockfm_uir1dkjzhu2 select.sfdc-form-control").val("t75kz");
+	  ferrariPitLane = 0;
+	  console.log("ferrariPitLane (change) = " + ferrariPitLane );
+ }
+}); 
+
+$("#rockfm_uiuj97gsd21 select.sfdc-form-control").change(function(){
+ var ferrariSimulatorChange = $(this).children("option:selected").attr('data-uifm-inp-val');
+    ferrariSimulator = parseInt(ferrariSimulatorChange);
+ console.log("ferrariSimulator (change) = " + ferrariSimulator );
+   if( ferrariSimulator > ferarriGuest ){
+	   alert("The number of guests for the Simulator event exceeds the total number of guests for the Ferrari event.");
+	  $("#rockfm_uiuj97gsd21 select.sfdc-form-control").val("i54xp");
+	  ferrariSimulator = 0;
+	  console.log("ferrariSimulator (change) = " + ferrariSimulator );
+ }
+}); 
+  
+});
